@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "crf-blocks/test-block",
+  "version": "0.1.0",
+  "title": "Test Block",
+  "category": "design",
+  "icon": "smiley",
+  "description": "A custom WordPress block template with TypeScript and modern development tools.",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Block Title"
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "titleTextColor": {
+      "type": "string",
+      "default": "#1a202c"
+    },
+    "titleFontSize": {
+      "type": "number",
+      "default": 3
+    },
+    "content": {
+      "type": "string",
+      "default": "Add your content here..."
+    },
+    "contentTextColor": {
+      "type": "string",
+      "default": "#333333"
+    },
+    "contentFontSize": {
+      "type": "number",
+      "default": 1
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "padding": {
+      "type": "object",
+      "default": {
+        "top": 2,
+        "bottom": 2,
+        "left": 2,
+        "right": 2
+      }
+    },
+    "alignment": {
+      "type": "string",
+      "default": "center",
+      "enum": ["left", "center", "right"]
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "textdomain": "test",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
