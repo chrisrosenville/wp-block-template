@@ -102,6 +102,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
     <>
       <InspectorControls>
         <PanelBody title={__("Block Settings", "my-plugin")}>
+          {/* Title Settings */}
           <ToggleControl
             label={__("Show Title", "my-plugin")}
             checked={showTitle}
@@ -109,17 +110,16 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           />
 
           {showTitle && (
-            <>
-              <RangeControl
-                label={__("Title Font Size (rem)", "my-plugin")}
-                value={titleFontSize}
-                onChange={(value) => setAttributes({ titleFontSize: value })}
-                min={0.1}
-                max={5}
-              />
-            </>
+            <RangeControl
+              label={__("Title Font Size (rem)", "my-plugin")}
+              value={titleFontSize}
+              onChange={(value) => setAttributes({ titleFontSize: value })}
+              min={0.1}
+              max={5}
+            />
           )}
 
+          {/* Content Settings */}
           <RangeControl
             label={__("Content Font Size", "my-plugin")}
             value={contentFontSize}
@@ -177,7 +177,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           />
         </PanelBody>
 
-        {/* Background Color */}
+        {/* Color Settings */}
         <PanelColorSettings
           title={__("Color Settings", "my-plugin")}
           initialOpen={false}
